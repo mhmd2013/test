@@ -58,12 +58,12 @@ database.mongodb
  */
  
  
- app.post("/login",function(req,res){
+ app.post("/loginM",function(req,res){
   console.log("pk")
 
   res.json({connected:true})
  })
- app.post("/loginM",function(req,res){
+ app.post("/login",function(req,res){
      //var userBody=req.body;
      console.log(req.body)
 
