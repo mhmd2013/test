@@ -31,15 +31,19 @@ if(RNFS.exists(path)==false){
   
 }
 */
+const run=async()=>{
 
+  await database.mongodb
+  .connect(`${process.env.MONGODB_URI}`)
+  .then((ex) => {
+   //console.log(ex);
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => console.log("error:"+err));
+};
+run();
 // connect mongodb with mongoose
-database.mongodb
- .connect(`${process.env.MONGODB_URI}`)
- .then((ex) => {
-  //console.log(ex);
-   console.log("Connected to MongoDB");
- })
- .catch((err) => console.log("error:"+err));
+
 
  //local connect to mongodb
  /*
