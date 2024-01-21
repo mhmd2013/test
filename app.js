@@ -34,6 +34,17 @@ if(RNFS.exists(path)==false){
 
 // connect mongodb with mongoose
 database.mongodb
+ .connect(`${process.env.MONGODB_URI}`)
+ .then((ex) => {
+  //console.log(ex);
+   console.log("Connected to MongoDB");
+ })
+ .catch((err) => console.log(err));
+
+ //local connect to mongodb
+ /*
+ 
+ database.mongodb
  .connect(`${process.env.MONGODB_URI}`, {//${databaseName}
    useNewUrlParser: true,
    useUnifiedTopology: true,
@@ -43,8 +54,8 @@ database.mongodb
    console.log("Connected to MongoDB");
  })
  .catch((err) => console.log(err));
-
  
+ */
  
  app.post("/login",function(req,res){
      //var userBody=req.body;
