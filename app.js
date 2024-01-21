@@ -831,6 +831,7 @@ app.post("/paking",async function(req,res){
  });
  
 // listen on port 3000
-app.listen(3000, () => {
+const _port=process.env.PORT||3000;
+app.listen(_port, () => {
  console.log("Server is listening on port 3000");
 });
