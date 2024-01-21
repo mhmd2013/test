@@ -39,7 +39,7 @@ database.mongodb
   //console.log(ex);
    console.log("Connected to MongoDB");
  })
- .catch((err) => console.log(err));
+ .catch((err) => console.log("error:"+err));
 
  //local connect to mongodb
  /*
